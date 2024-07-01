@@ -1,21 +1,26 @@
-import { BrowswerRouter, Routers, Route } from 'react-router-dom';
-import './index.css';
-import Profile from './pages/Profile';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Signin from './pages/Signin';
-import Signup from './pages/Signup';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+// import Profile from './pages/Profile';
+// import Header from './components/Header';
+// import PrivateRoute from './components/PrivateRoute';
 
 export default function App() {
   return (
-    <BrowswerRouter>
-      <Routers>
-        <Route path="/" element={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/sign-in" component={Signin} />
-        <Route path='/sign-up' component= {Signup} />
-      </Routers>
-    </BrowswerRouter>
-  )
+    <BrowserRouter>
+      {/* header */}
+      {/* <Header /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        {/* <Route element={<PrivateRoute />}>
+          <Route path='/profile' element={<Profile />} />
+        </Route> */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
