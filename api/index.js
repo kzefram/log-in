@@ -5,7 +5,6 @@ import authRoutes from './routes/auth.route.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
-// Ensuring Commit to the Repository
 
 // Connect to MongoDB
 mongoose
