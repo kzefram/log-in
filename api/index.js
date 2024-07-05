@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import userRoutes from './routes/user.route.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -24,8 +25,4 @@ app.listen(4000, () => {
 
 // Creating a route
 
-app.get('/', (req, res) => {
-    res.json({ 
-        message: 'API is working' 
-    });
-}); 
+app.use('/api/user', userRoutes)
