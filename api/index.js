@@ -25,4 +25,4 @@ app.listen(4000, () => {
 
 // Creating a route
 
-app.use('/api/user', userRoutes)
+app.use('/api/user', userRoutes);
